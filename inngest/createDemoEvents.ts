@@ -5,9 +5,9 @@ import casual from "casual";
 
 // })
 
-export default inngest.createScheduledFunction(
-  "Create Demo Events",
-  "*/5 * * * *",
+export default inngest.createFunction(
+  { name: "Create Demo Events" },
+  { cron: "*/5 * * * *" },
   async () => {
     const events = [
       {
